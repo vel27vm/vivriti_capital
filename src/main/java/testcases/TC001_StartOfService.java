@@ -87,6 +87,7 @@ public class TC001_StartOfService extends SS_Base {
 				// Verify Email
 				SS_EmailPage email = new SS_EmailPage();
 				email.verifyEmail();
+				break;
 				
 			} else {
 				// Assume new question added
