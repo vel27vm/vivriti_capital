@@ -8,7 +8,7 @@ import org.openqa.selenium.support.How;
 
 import wdMethods.ProMethods;
 
-public class SS_HomePage extends ProMethods {
+public class SS_HomePage extends SS_Base {
 
 	public SS_HomePage() {
 
@@ -25,18 +25,18 @@ public class SS_HomePage extends ProMethods {
 	@FindBy(how = How.XPATH, using = "//button[contains(text(),'Go')]")
 	private WebElement ele_Go;
 
-	public SS_HomePage enterCity(String data) {
+	public void enterCity(String data) {
 
 		type(ele_Where, data);
 		click(ele_slctChennai);
-		return this;
+		
 
 	}
 
-	public SS_InfoPage clickGo() {
+	public void clickGo() {
 
 		click(ele_Go);
-		return new SS_InfoPage();
+		
 
 	}
 

@@ -8,7 +8,7 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 import wdMethods.ProMethods;
 
-public class SS_EmailPage extends ProMethods{
+public class SS_EmailPage extends SS_Base{
 	
 	public SS_EmailPage() {
 

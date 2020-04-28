@@ -8,7 +8,7 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 import wdMethods.ProMethods;
 
-public class SS_AdditionalInfo extends ProMethods {
+public class SS_AdditionalInfo extends SS_Base {
 	
 	public SS_AdditionalInfo() {
 
@@ -18,20 +18,12 @@ public class SS_AdditionalInfo extends ProMethods {
 	@FindBy(how = How.XPATH, using = "//textarea[contains(@class,'textArea')]")
 	private WebElement ele_textArea;
 	
-	@FindBy(how = How.XPATH, using = "//button[contains(text(),'Next')]")
-	private WebElement ele_Next;
 
-	
-	public SS_AdditionalInfo enterInfo(String data) {
+	public void enterInfo(String data) {
 		
 		type(ele_textArea, data);
-		return this;
+		
 	}
 	
-	public SS_TimePeriod clickNext() {
-
-
-		click(ele_Next);
-		return new SS_TimePeriod();
-	}
+	
 }

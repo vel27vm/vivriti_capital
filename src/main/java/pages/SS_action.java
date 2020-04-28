@@ -8,7 +8,7 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 import wdMethods.ProMethods;
 
-public class SS_action extends ProMethods {
+public class SS_action extends SS_Base {
 	
 	public SS_action() {
 
@@ -18,22 +18,13 @@ public class SS_action extends ProMethods {
 	@FindBy(how = How.XPATH, using = "//div[contains(text(),'Replace')]//preceding-sibling::div//child::div[contains(@class,'checkbox')]")
 	private WebElement ele_Replace;
 	
-	@FindBy(how = How.XPATH, using = "//button[contains(text(),'Next')]")
-	private WebElement ele_Next;
-	
-	
-	public SS_action selectReplace() {
+	public void selectReplace() {
 
 		click(ele_Replace);
-		return this;
+		
 
 	}
-	public SS_PblmDescription clickNext() {
-
-
-		click(ele_Next);
-		return new SS_PblmDescription();
-	}
+	
 
 
 }

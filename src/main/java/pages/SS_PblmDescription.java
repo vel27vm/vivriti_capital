@@ -8,7 +8,7 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 import wdMethods.ProMethods;
 
-public class SS_PblmDescription extends ProMethods {
+public class SS_PblmDescription extends SS_Base {
 	
 	public SS_PblmDescription() {
 
@@ -18,21 +18,13 @@ public class SS_PblmDescription extends ProMethods {
 	@FindBy(how = How.XPATH, using = "//div[contains(text(),'Leak in a pipe')]//preceding-sibling::div//child::div[contains(@class,'checkbox')]")
 	private WebElement ele_Leak;
 	
-	@FindBy(how = How.XPATH, using = "//button[contains(text(),'Next')]")
-	private WebElement ele_Next;
 	
-	
-	public SS_PblmDescription selectLeak() {
+	public void selectLeak() {
 
 		click(ele_Leak);
-		return this;
+		
 
 	}
-	public SS_AdditionalInfo clickNext() {
-
-
-		click(ele_Next);
-		return new SS_AdditionalInfo();
-	}
+	
 
 }

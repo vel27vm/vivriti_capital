@@ -8,7 +8,7 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 import wdMethods.ProMethods;
 
-public class SS_TimeSlot extends ProMethods  {
+public class SS_TimeSlot extends SS_Base  {
 	
 	public SS_TimeSlot() {
 
@@ -18,21 +18,13 @@ public class SS_TimeSlot extends ProMethods  {
 	@FindBy(how = How.XPATH, using = "//div[contains(@class,'selectBox')]//child::select")
 	private WebElement ele_timeSlot;
 	
-	@FindBy(how = How.XPATH, using = "//button[contains(text(),'Next')]")
-	private WebElement ele_Next;
 
 	
-	public SS_TimeSlot enterTimeSlot(String data) {
+	public void enterTimeSlot(String data) {
 		
 		selectDropDownUsingText(ele_timeSlot, data);
-		return this;
+		
 	}
 	
-	public SS_EmailPage clickNext() {
-
-
-		click(ele_Next);
-		return new SS_EmailPage();
-	}
-
+	
 }
